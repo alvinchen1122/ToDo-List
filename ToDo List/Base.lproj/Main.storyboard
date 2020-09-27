@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="dkr-lO-eMh" kind="show" identifier="showDetail" id="3KU-s2-Aso"/>
+                                            <segue destination="dkr-lO-eMh" kind="show" identifier="ShowDetail" id="3KU-s2-Aso"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -77,7 +77,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7uH-HT-OBb">
-                                                    <rect key="frame" x="16" y="5" width="288" height="34"/>
+                                                    <rect key="frame" x="15" y="5" width="288" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -140,7 +140,11 @@
                                 <action selector="cancelButtonPressed:" destination="dkr-lO-eMh" id="ami-O5-jgF"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="22e-1B-4FG"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="22e-1B-4FG">
+                            <connections>
+                                <segue destination="0Is-3S-Xwh" kind="unwind" unwindAction="unwindFromDetailWithSegue:" id="Jhv-7x-LhQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="rxG-jE-ZHg" id="1oL-tb-Pl5"/>
@@ -150,6 +154,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XjF-5w-hw2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="0Is-3S-Xwh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3406.875" y="84.507042253521121"/>
         </scene>
